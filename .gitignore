@@ -1,3 +1,4 @@
 .env
 .ampy
 *.bin
+settings.json
