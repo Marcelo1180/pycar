@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pycar</title>
-</head>
-<body>
-<h1>Hello Pycar!</h1>
-<a href="/on">On</a>
-<a href="/off">Off</a>
-</body>
+  </head>
+  <body>
+    <h1>Hello Pycar!</h1>
+    <div onmousedown="action('forward')" onmouseup="stop()">Forward</div>
+    <div onmousedown="action('backward')" onmouseup="stop()">Backward</div>
+    <div onmousedown="action('turn_left')" onmouseup="stop()">Turn Left</div>
+    <div onmousedown="action('turn_right')" onmouseup="stop()">Turn Right</div>
+    <script>
+      function action(action) {
+        fetch(`/${action}`)
+          .then((response) => response.json())
+          .then((data) => console.log(data));
+      }
+
+      function stop() {
+        fetch("/stop")
+          .then((response) => response.json())
+          .then((data) => console.log(data));
+      }
+    </script>
+  </body>
 </html>
