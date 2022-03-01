@@ -1,4 +1,5 @@
 ## PREPARE ESP8266
+
 List all usb ports
 ```sh
 ls -l /dev/cu.*

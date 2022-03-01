@@ -11,7 +11,7 @@ class Wifi:
         password = settings["WIFI"]["WIFI_PASSWORD"]
         station = network.WLAN(network.STA_IF)
         if station.isconnected() == True:
-            # print('network config:', station.ifconfig())
+            print('network config:', station.ifconfig())
             print("Already connected")
             return
 
