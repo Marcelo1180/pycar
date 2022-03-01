@@ -6,11 +6,11 @@ from utils.dcmotor import DCMotor
 # Pin definitions
 frequency = 15000
 # led = Pin(4, Pin.OUT)
-motor1_pin1 = Pin(16, Pin.OUT)
-motor1_pin2 = Pin(5, Pin.OUT)
+motor1_pin1 = Pin(5, Pin.OUT)
+motor1_pin2 = Pin(16, Pin.OUT)
 motor1_enable = PWM(Pin(14), frequency)
-motor2_pin1 = Pin(4, Pin.OUT)
-motor2_pin2 = Pin(0, Pin.OUT)
+motor2_pin1 = Pin(0, Pin.OUT)
+motor2_pin2 = Pin(4, Pin.OUT)
 motor2_enable = PWM(Pin(12), frequency)
 # Motor definition
 dc_motor1 = DCMotor(motor1_pin1, motor1_pin2, motor1_enable, 350, 1023)
