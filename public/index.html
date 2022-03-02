@@ -3,14 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="joystick.css" type="text/css" />
     <title>Pycar</title>
   </head>
   <body>
-    <h1>Hello Pycar!</h1>
-    <div onmousedown="action('forward')" onmouseup="stop()">Forward</div>
-    <div onmousedown="action('backward')" onmouseup="stop()">Backward</div>
-    <div onmousedown="action('turn_left')" onmouseup="stop()">Turn Left</div>
-    <div onmousedown="action('turn_right')" onmouseup="stop()">Turn Right</div>
+    <div class="box">
+      <div class="controller-left">
+        <div class="controls">
+          <div
+            class="control-up"
+            onmousedown="action('forward')"
+            onmouseup="stop()"
+            ontouchstart="action('forward')"
+            ontouchend="stop()"
+          >
+            &#9650;
+          </div>
+          <div
+            class="control-down"
+            onmousedown="action('backward')"
+            onmouseup="stop()"
+            ontouchstart="action('backward')"
+            ontouchend="stop()"
+          >
+            &#9660;
+          </div>
+          <div
+            class="control-right"
+            onmousedown="action('turn_right')"
+            onmouseup="stop()"
+            ontouchstart="action('turn_right')"
+            ontouchend="stop()"
+          >
+            &#9654;
+          </div>
+          <div
+            class="control-left"
+            onmousedown="action('turn_left')"
+            onmouseup="stop()"
+            ontouchstart="action('turn_left')"
+            ontouchend="stop()"
+          >
+            &#9664;
+          </div>
+        </div>
+      </div>
+      <div class="controller-middle"></div>
+      <div class="controller-right">
+        <div class="controls"></div>
+      </div>
+    </div>
     <script>
       function action(action) {
         fetch(`/${action}`)

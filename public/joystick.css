@@ -1,0 +1,96 @@
+body {
+  font-family: system-ui;
+  background: #f06d06;
+  color: white;
+  text-align: center;
+}
+.box {
+  position: relative;
+  width: 700px;
+  height: 300px;
+}
+.controller-left {
+  position: absolute;
+  background: #c3cccf;
+  padding: 60px;
+  display: inline-block;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.controls {
+  position: relative;
+  height: 170px;
+  width: 170px;
+  font-size: 2rem;
+  border-radius: 50%;
+  background: #bbc6c9;
+}
+.control-up {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  background: #393a42;
+  top: 0;
+  left: calc(50% - 25px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.control-down {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  background: #393a42;
+  bottom: 0;
+  left: calc(50% - 25px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.control-right {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  background: #393a42;
+  right: 0;
+  top: calc(50% - 25px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.control-left {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  background: #393a42;
+  left: 0;
+  top: calc(50% - 25px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.controller-middle {
+  position: absolute;
+  background: #c3cccf;
+  width: 60%;
+  height: 65%;
+  top: 0;
+  left: 20%;
+  z-index: 0;
+}
+.controller-right {
+  position: absolute;
+  background: #c3cccf;
+  padding: 60px;
+  display: inline-block;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}

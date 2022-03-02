@@ -21,19 +21,20 @@ dc_motor2 = DCMotor(motor2_pin1, motor2_pin2, motor2_enable, 350, 1023)
 Wifi.connect()
 # Public a html file
 ws.routefile("/", "public/index.html")
+ws.routefile("/joystick.css", "public/joystick.css")
 
 
 @ws.route("/turn_left")
 def turn_left(query=None):
-    dc_motor1.backward(MOTOR_SPEED)
-    dc_motor2.forward(MOTOR_SPEED)
+    dc_motor2.backward(MOTOR_SPEED)
+    dc_motor1.forward(MOTOR_SPEED)
     return json.dumps({"action": "turn_left", "message": "OK"})
 
 
 @ws.route("/turn_right")
 def turn_right(query=None):
-    dc_motor2.backward(MOTOR_SPEED)
-    dc_motor1.forward(MOTOR_SPEED)
+    dc_motor1.backward(MOTOR_SPEED)
+    dc_motor2.forward(MOTOR_SPEED)
     return json.dumps({"action": "turn_right", "message": "OK"})
 
 
