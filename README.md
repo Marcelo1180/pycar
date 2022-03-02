@@ -1,6 +1,8 @@
 # Pycar
 
-Pycar is a project to build a car with micropython using ESP8266
+Pycar is a project to build a car with micropython using ESP8266 and driver L298N
+
+![Electronic Diagram](doc/Pycar.jpg)
 
 This project was tested in:
 * MacOSX Big Sur
